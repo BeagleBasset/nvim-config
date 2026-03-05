@@ -1,3 +1,4 @@
+vim.defer_fn(function()
 require("fzf-lua").setup{
 	file_icon_padding = ' ',
 --   -- MISC GLOBAL SETUP OPTIONS, SEE BELOW
@@ -57,3 +58,4 @@ keymap = {
     },
 },
 }
+end, 200)

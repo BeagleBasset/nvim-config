@@ -11,7 +11,7 @@ if vim.fn.empty(vim.fn.glob(data_dir .. '/site/autoload/plug.vim')) == 1 then
 	vim.cmd('autocmd VimEnter * PlugInstall --sync | source $MYVIMRC')
 end
 
-local vim = vim
+--local vim = vim
 local Plug = vim.fn['plug#']
 
 vim.g.start_time = vim.fn.reltime()
@@ -39,6 +39,13 @@ Plug('ron-rs/ron.vim') --ron syntax highlighting
 Plug('MeanderingProgrammer/render-markdown.nvim') --render md inline
 Plug('emmanueltouzery/decisive.nvim') --view csv files
 Plug('folke/twilight.nvim') --surrounding dim
+Plug('neovim/nvim-lspconfig')        -- LSP
+Plug('hrsh7th/nvim-cmp')            -- completion engine
+Plug('hrsh7th/cmp-nvim-lsp')        -- LSP completion source
+Plug('hrsh7th/cmp-buffer')
+Plug('hrsh7th/cmp-path')
+Plug('L3MON4D3/LuaSnip')            -- snippets
+Plug('saadparwaiz1/cmp_luasnip')    -- snippet completions
 
 vim.call('plug#end')
 
@@ -61,10 +68,12 @@ require("plugins.lualine")
 require("plugins.nvim-lint")
 -- require("plugins.nvim-tree")
 require("plugins.render-markdown")
--- require("plugins.treesitter")
+
 -- require("plugins.twilight")
 -- require("plugins.which-key")
-
+require("plugins.lsp")
+require("plugins.cmp")
+require("plugins.treesitter")
 vim.defer_fn(function() 
 		--defer non-essential configs,
 		--purely for experimental purposes:
