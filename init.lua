@@ -1,8 +1,3 @@
--- bread's neovim config
--- keymaps are in lua/config/mappings.lua
--- install a patched font & ensure your terminal supports glyphs
--- enjoy :D
-
 -- auto install vim-plug and plugins, if not found
 local data_dir = vim.fn.stdpath('data')
 if vim.fn.empty(vim.fn.glob(data_dir .. '/site/autoload/plug.vim')) == 1 then
@@ -86,5 +81,8 @@ require("plugins.treesitter")
 require("plugins.twilight")
 require("plugins.which-key")
 end, 100)
-
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.softtabstop = 4
+vim.opt.expandtab = true
 load_theme()
