@@ -13,6 +13,7 @@ vim.g.start_time = vim.fn.reltime()
 vim.loader.enable() --  SPEEEEEEEEEEED 
 vim.call('plug#begin')
 
+Plug('navarasu/onedark.nvim')
 Plug('catppuccin/nvim', { ['as'] = 'catppuccin' }) --colorscheme
 Plug('ellisonleao/gruvbox.nvim', { ['as'] = 'gruvbox' }) --colorscheme 2
 Plug('uZer/pywal16.nvim', { [ 'as' ] = 'pywal16' }) --or, pywal colorscheme

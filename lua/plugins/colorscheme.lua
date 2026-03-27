@@ -36,3 +36,11 @@ require("gruvbox").setup({
 -- if you want to get rid of toggling and just set one scheme, you can set here
 -- local colorscheme = "catppuccin"
 -- vim.cmd('silent! colorscheme catppuccin')
+
+require('onedark').setup {
+    style = 'warm', -- dark, darker, cool, deep, warm, warmer
+    transparent = true,
+    term_colors = true,
+    ending_tildes = false,
+    cmp_itemkind_reverse = false,
+}
