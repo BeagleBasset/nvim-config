@@ -42,7 +42,7 @@ Plug('hrsh7th/cmp-buffer')
 Plug('hrsh7th/cmp-path')
 Plug('L3MON4D3/LuaSnip')            -- snippets
 Plug('saadparwaiz1/cmp_luasnip')    -- snippet completions
-
+Plug('ray-x/lsp_signature.nvim')
 vim.call('plug#end')
 
 -- move config and plugin config to alternate files
